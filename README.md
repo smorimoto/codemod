@@ -3,7 +3,7 @@ codemod
 
 [![PyPI](https://img.shields.io/pypi/v/codemod.svg)](https://pypi.python.org/pypi/codemod)
 [![downloads](https://img.shields.io/pypi/dw/codemod.svg)](https://pypi.python.org/pypi/codemod)
-[![Travis CI](http://img.shields.io/travis/facebook/codemod.svg)](https://travis-ci.org/facebook/codemod)
+[![Main workflow](https://github.com/facebook/codemod/workflows/Main%20workflow/badge.svg?branch=master)](https://github.com/facebook/codemod/actions)
 [![Code Health](https://landscape.io/github/rochacbruno/codemod/master/landscape.svg?style=flat)](https://landscape.io/github/rochacbruno/codemod/master)
 
 
