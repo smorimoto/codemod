@@ -84,9 +84,9 @@ def path_filter(extensions, exclude_paths=None):
             return False
         if exclude_paths:
             for excluded in exclude_paths:
-                if (path.startswith(excluded) or
-                        path.startswith('./' + excluded) or
-                        fnmatch.fnmatch(path, excluded)):
+                if (path.startswith(excluded)
+                        or path.startswith('./' + excluded)
+                        or fnmatch.fnmatch(path, excluded)):
                     return False
         return True
     return the_filter

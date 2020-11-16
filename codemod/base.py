@@ -262,11 +262,11 @@ def _ask_about_patch(patch, editor, default_no):
     if patch.new_lines is not None:
         if not yes_to_all:
             if default_no:
-                print('Accept change (y = yes, n = no [default], e = edit, ' +
-                      'A = yes to all, E = yes+edit, q = quit)? '),
+                print('Accept change (y = yes, n = no [default], e = edit, '
+                      + 'A = yes to all, E = yes+edit, q = quit)? '),
             else:
-                print('Accept change (y = yes [default], n = no, e = edit, ' +
-                      'A = yes to all, E = yes+edit, q = quit)? '),
+                print('Accept change (y = yes [default], n = no, e = edit, '
+                      + 'A = yes to all, E = yes+edit, q = quit)? '),
             p = _prompt('yneEAq', default=default_action)
         else:
             p = 'y'

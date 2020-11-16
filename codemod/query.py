@@ -13,6 +13,7 @@ class Query(object):
     >>> Query(lambda x: None, start='profile.php:20').start_position
     Position('profile.php', 20)
     """
+
     def __init__(self,
                  suggestor,
                  start=None,
@@ -22,7 +23,6 @@ class Query(object):
                      extensions=['php', 'phpt', 'js', 'css', 'rb', 'erb']
                  ),
                  inc_extensionless=False):
-
         """
         @param suggestor            A function that takes a list of lines and
                                     generates instances of Patch to suggest.
@@ -138,9 +138,9 @@ class Query(object):
         path_list = Query._sublist(path_list, start_pos.path, end_pos.path)
         path_list = (
             path for path in path_list if
-            Query._path_looks_like_code(path) and
-            (self.path_filter(path)) or
-            (self.inc_extensionless and helpers.is_extensionless(path))
+            Query._path_looks_like_code(path)
+            and (self.path_filter(path))
+            or (self.inc_extensionless and helpers.is_extensionless(path))
         )
         for path in path_list:
             try:
@@ -173,10 +173,9 @@ class Query(object):
         of `root_directory`.
         """
 
-        paths = [os.path.join(root, name)
-                 for root, dirs, files in os.walk(root_directory)  # noqa
-                 for name in files]
-        paths.sort()
+        paths = sorted([os.path.join(root, name)
+                        for root, dirs, files in os.walk(root_directory)
+                        for name in files])
         return paths
 
     @staticmethod
@@ -208,8 +207,8 @@ class Query(object):
         False
         """
         return (
-            '/.' not in path and
-            path[-1] != '~' and
-            not path.endswith('tags') and
-            not path.endswith('TAGS')
+            '/.' not in path
+            and path[-1] != '~'
+            and not path.endswith('tags')
+            and not path.endswith('TAGS')
         )
