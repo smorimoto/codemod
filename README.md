@@ -4,6 +4,7 @@ codemod
 [![PyPI](https://img.shields.io/pypi/v/codemod.svg)](https://pypi.python.org/pypi/codemod)
 [![downloads](https://img.shields.io/pypi/dw/codemod.svg)](https://pypi.python.org/pypi/codemod)
 [![Main workflow](https://github.com/facebook/codemod/workflows/Main%20workflow/badge.svg?branch=master)](https://github.com/facebook/codemod/actions)
+[![CodeQL](https://github.com/facebook/codemod/workflows/CodeQL/badge.svg?branch=master)](https://github.com/facebook/codemod/actions)
 [![Code Health](https://landscape.io/github/rochacbruno/codemod/master/landscape.svg?style=flat)](https://landscape.io/github/rochacbruno/codemod/master)
 
 
